@@ -42,8 +42,8 @@ class DieFragment : Fragment() {
             throwDie()
         }
     }
-
+//add + 1
     fun throwDie() {
-        dieTextView.text = Random.nextInt(dieSides).toString()
+        dieTextView.text = Random.nextInt(dieSides+1).toString()
     }
 }
