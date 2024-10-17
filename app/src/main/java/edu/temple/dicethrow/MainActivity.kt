@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.widget.Button
+import androidx.core.os.bundleOf
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.rollDiceButton).setOnClickListener(){
             (supportFragmentManager.findFragmentById(R.id.rollDiceButton) as DieFragment).throwDie()
         }
-
+        DieFragment.newInstance(100)
     }
+
 }
